@@ -8,21 +8,21 @@ import javax.faces.event.ValueChangeEvent;
 @RequestScoped
 public class BeanClass {
 
-    // Init ----------------------------------------------------------------------------------------
+    // Binding Özelliği İçin Tanımlanan Bileşenler -------------------------------------------------------
 
     private HtmlInputText inputComponent;
     private String inputValue;
     private HtmlOutputText outputComponent;
     private String outputValue;
 
-    // Constructors -------------------------------------------------------------------------------
+    // Constructor Metodu -------------------------------------------------------------------------------
 
     public BeanClass()
     {
-        log("constructed");
+        log("Bean Class Sınıfının Yapılandırıcı Metodu Çalıştı");
     }
 
-    // Actions ------------------------------------------------------------------------------------
+    // Action Metodları ------------------------------------------------------------------------------------
 
     public void inputChanged(ValueChangeEvent event) {
         log(event.getOldValue() + " to " + event.getNewValue());
@@ -30,7 +30,7 @@ public class BeanClass {
 
     public void action() {
         outputValue = inputValue;
-        log("succes");
+        log("Başarılı");
     }
 
     // Getters/setters ----------------------------------------------------------------------------
@@ -74,6 +74,6 @@ public class BeanClass {
 
     private void log(Object object) {
         String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
-        System.out.println("MyBean " + methodName + ": " + object);
+        System.out.println("Managed Bean Sınıfı " + methodName + ": " + object);
     }
 }

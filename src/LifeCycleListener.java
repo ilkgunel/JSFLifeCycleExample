@@ -9,10 +9,10 @@ public class LifeCycleListener implements PhaseListener {
     }
 
     public void beforePhase(PhaseEvent event) {
-        System.out.println("START PHASE " + event.getPhaseId());
+        System.out.println("FAZ BAŞLANGICI " + event.getPhaseId());
     }
 
     public void afterPhase(PhaseEvent event) {
-        System.out.println("END PHASE " + event.getPhaseId());
+        System.out.println("FAZ BİTİŞİ " + event.getPhaseId());
     }
 }

@@ -7,12 +7,11 @@ import javax.faces.convert.FacesConverter;
 public class ConverterClass implements Converter {
 
     public Object getAsObject(FacesContext context, UIComponent component, String value) {
-        System.out.println("MyConverter getAsObject: " + value);
+        System.out.println("Dönüştürücü Sınıfı Obje Olarak Getirme Metodu Çalıştı: " + value);
         return value;
     }
-
     public String getAsString(FacesContext context, UIComponent component, Object value) {
-        System.out.println("MyConverter getAsString: " + value);
+        System.out.println("Dönüştürücü Sınıfı String Olarak Getirme Metodu Çalıştı" + value);
         return (String) value;
     }
 
